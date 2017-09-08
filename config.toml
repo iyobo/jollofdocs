@@ -1,6 +1,7 @@
 baseURL = "http://docs.jollofjs.com/"
 languageCode = "en-us"
 title = "JollofJS Docs"
+
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
