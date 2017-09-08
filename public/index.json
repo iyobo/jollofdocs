@@ -1,0 +1,148 @@
+[
+{
+	"uri": "http://docs.jollofjs.com/controllers/flow/",
+	"title": "Flow",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/data/models/",
+	"title": "Models",
+	"tags": [],
+	"description": "",
+	"content": "Models are how you tell JollofJS how to structure your data.\nAll models for your app MUST be placed under apps/models\nLet\u0026rsquo;s look at the User model in there\nconst jollof = require('jollof'); const data = jollof.data; const types = data.types; const jql = data.jql; const schema = { name: 'User', dataSource: 'default', structure: { firstName: String, lastName: String, name: { type: String, meta: { disableEdit: true } }, email: types.Email(), password: { type: String, meta: { widget: 'password' } }, isAdmin: Boolean, accountType: { type: String, meta: { choices: [ 'normal', 'grand', 'epic' ] } } }, ... } module.exports = data.registerModel(schema);  If you have worked with ODMs like Mongoose, this should look familiar.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/basics/",
+	"title": "Basics",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 1 Basics Get introduced to the JollofJS framework.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": " Welcome to the JollofJS Docs Get introduced to the JollofJS framework.\nGet started\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/basics/introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": " What is JollofJS JollofJS is a futuristic NodeJS web framework and Content management system.\nThe Higlights:\n Built-in Admin User Interface Ever wondered why something like Django Admin doesn\u0026rsquo;t exist for NodeJS? Well with JollofJS, it does now. Administer your site\u0026rsquo;s data with the built-in Jollof Admin (built from scratch using React). E.g You could whip up a blog for your Application and use Jollof Admin as a simple CMS backend for that blog. The options are endless!   Full support for ES8+ features i.e. Async/Await\n Environmental Configuration Tree. JollofJS has a custom-built config system that makes it easy to have different configurations per node.ENV. Base configuration can easily be overwritten by environmental configs (i.e. development, test, production, etc).\n Convention AND configuration. JollofJs starts you off with very good configurations that serve as awesome conventions for your web apps.\n  And more!\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/configuration/settings/",
+	"title": "Settings",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/data/fields/",
+	"title": "Fields",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/data/",
+	"title": "Data",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 2 Data "
+},
+{
+	"uri": "http://docs.jollofjs.com/data/queries/",
+	"title": "Queries",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/controllers/",
+	"title": "Controllers",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 3 Controllers Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/views/",
+	"title": "Views",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 4 Views Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/controllers/routes/",
+	"title": "Routes",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/configuration/deploying/",
+	"title": "Deploying",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/configuration/environments/",
+	"title": "Environments",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/views/nunjucks/",
+	"title": "Nunjucks",
+	"tags": [],
+	"description": "",
+	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/basics/requirements/",
+	"title": "Requirements",
+	"tags": [],
+	"description": "",
+	"content": " NodeJS v8+ NPM v4 is recommended. (npm v5 comes with node 8, but has too many bugs as at the time of this writing) Mongodb as default DB. Install and run it Redis for sessions. Install and run it.  "
+},
+{
+	"uri": "http://docs.jollofjs.com/basics/getting-started/",
+	"title": "Getting Started",
+	"tags": [],
+	"description": "",
+	"content": "First install the Jollof global cli\nnpm i -g jollofjs  You also need to have mongoDB and Redis up and running.\nCreate your JollofJS app with:\njollof new myApp  Before you run your app, create an admin user:\ncd myApp jollof run createAdmin test@test.com password  This runs the jollof command in createAdmin.js, which exists in the commands/ directory in your project.\nNow you are ready to run your jollof app:\nnpm start  You should now be able to see jollof running at localhost:3001.\nAt this point, if you are u for a challenge, look through and explore your project files to get a mind of how a typical JollofJS project works.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/configuration/",
+	"title": "Configuration",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 5 Configuration Lorem Ipsum.\n"
+},
+{
+	"uri": "http://docs.jollofjs.com/admin/",
+	"title": "Admin Interface",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 6 The Admin Interface "
+},
+{
+	"uri": "http://docs.jollofjs.com/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://docs.jollofjs.com/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

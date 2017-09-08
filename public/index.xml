@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on JollofJS Docs</title>
+    <link>http://docs.jollofjs.com/</link>
+    <description>Recent content in Home on JollofJS Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Sep 2017 00:06:44 -0400</lastBuildDate>
+    
+	<atom:link href="http://docs.jollofjs.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flow</title>
+      <link>http://docs.jollofjs.com/controllers/flow/</link>
+      <pubDate>Fri, 08 Sep 2017 02:09:26 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/controllers/flow/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Models</title>
+      <link>http://docs.jollofjs.com/data/models/</link>
+      <pubDate>Fri, 08 Sep 2017 02:01:49 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/data/models/</guid>
+      <description>Models are how you tell JollofJS how to structure your data.
+All models for your app MUST be placed under apps/models
+Let&amp;rsquo;s look at the User model in there
+const jollof = require(&#39;jollof&#39;); const data = jollof.data; const types = data.types; const jql = data.jql; const schema = { name: &#39;User&#39;, dataSource: &#39;default&#39;, structure: { firstName: String, lastName: String, name: { type: String, meta: { disableEdit: true } }, email: types.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>http://docs.jollofjs.com/basics/introduction/</link>
+      <pubDate>Fri, 08 Sep 2017 00:02:53 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/basics/introduction/</guid>
+      <description>What is JollofJS JollofJS is a futuristic NodeJS web framework and Content management system.
+The Higlights:
+ Built-in Admin User Interface Ever wondered why something like Django Admin doesn&amp;rsquo;t exist for NodeJS? Well with JollofJS, it does now. Administer your site&amp;rsquo;s data with the built-in Jollof Admin (built from scratch using React). E.g You could whip up a blog for your Application and use Jollof Admin as a simple CMS backend for that blog.</description>
+    </item>
+    
+    <item>
+      <title>Settings</title>
+      <link>http://docs.jollofjs.com/configuration/settings/</link>
+      <pubDate>Fri, 08 Sep 2017 02:11:12 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/configuration/settings/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Fields</title>
+      <link>http://docs.jollofjs.com/data/fields/</link>
+      <pubDate>Fri, 08 Sep 2017 02:03:53 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/data/fields/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Queries</title>
+      <link>http://docs.jollofjs.com/data/queries/</link>
+      <pubDate>Fri, 08 Sep 2017 02:04:05 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/data/queries/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Routes</title>
+      <link>http://docs.jollofjs.com/controllers/routes/</link>
+      <pubDate>Fri, 08 Sep 2017 02:15:26 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/controllers/routes/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Deploying</title>
+      <link>http://docs.jollofjs.com/configuration/deploying/</link>
+      <pubDate>Fri, 08 Sep 2017 02:12:15 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/configuration/deploying/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Environments</title>
+      <link>http://docs.jollofjs.com/configuration/environments/</link>
+      <pubDate>Fri, 08 Sep 2017 02:11:23 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/configuration/environments/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Nunjucks</title>
+      <link>http://docs.jollofjs.com/views/nunjucks/</link>
+      <pubDate>Fri, 08 Sep 2017 02:10:20 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/views/nunjucks/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Requirements</title>
+      <link>http://docs.jollofjs.com/basics/requirements/</link>
+      <pubDate>Fri, 08 Sep 2017 01:43:19 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/basics/requirements/</guid>
+      <description> NodeJS v8+ NPM v4 is recommended. (npm v5 comes with node 8, but has too many bugs as at the time of this writing) Mongodb as default DB. Install and run it Redis for sessions. Install and run it.  </description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>http://docs.jollofjs.com/basics/getting-started/</link>
+      <pubDate>Fri, 08 Sep 2017 01:42:05 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/basics/getting-started/</guid>
+      <description>First install the Jollof global cli
+npm i -g jollofjs  You also need to have mongoDB and Redis up and running.
+Create your JollofJS app with:
+jollof new myApp  Before you run your app, create an admin user:
+cd myApp jollof run createAdmin test@test.com password  This runs the jollof command in createAdmin.js, which exists in the commands/ directory in your project.
+Now you are ready to run your jollof app:</description>
+    </item>
+    
+  </channel>
+</rss>

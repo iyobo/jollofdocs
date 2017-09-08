@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://docs.jollofjs.com/controllers/flow/</loc>
+    <lastmod>2017-09-08T02:09:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/data/models/</loc>
+    <lastmod>2017-09-08T02:01:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/basics/</loc>
+    <lastmod>2017-09-08T00:06:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/</loc>
+    <lastmod>2017-09-08T00:06:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/basics/introduction/</loc>
+    <lastmod>2017-09-08T00:02:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/configuration/settings/</loc>
+    <lastmod>2017-09-08T02:11:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/data/fields/</loc>
+    <lastmod>2017-09-08T02:03:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/data/</loc>
+    <lastmod>2017-09-08T01:29:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/data/queries/</loc>
+    <lastmod>2017-09-08T02:04:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/controllers/</loc>
+    <lastmod>2017-09-08T01:29:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/views/</loc>
+    <lastmod>2017-09-08T01:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/controllers/routes/</loc>
+    <lastmod>2017-09-08T02:15:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/configuration/deploying/</loc>
+    <lastmod>2017-09-08T02:12:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/configuration/environments/</loc>
+    <lastmod>2017-09-08T02:11:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/views/nunjucks/</loc>
+    <lastmod>2017-09-08T02:10:20-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/basics/requirements/</loc>
+    <lastmod>2017-09-08T01:43:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/basics/getting-started/</loc>
+    <lastmod>2017-09-08T01:42:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/configuration/</loc>
+    <lastmod>2017-09-08T01:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/admin/</loc>
+    <lastmod>2017-09-08T02:16:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
