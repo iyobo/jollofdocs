@@ -50,6 +50,12 @@ The special field types are listed below:
 
 for required: `somefield: types.Email({required: true}),`
 
+### Password
+
+`somefield: {type: String, meta:{widget: 'password'}}`
+
+for required: `somefield: {type: String, required: true, meta:{widget: 'password'}}`
+
 ### Textarea
 
 `somefield: types.Textarea(),` (prefferred) or `somefield: {type: String, widget: 'textarea' } `

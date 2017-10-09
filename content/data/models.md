@@ -93,3 +93,39 @@ const fullName = user.printFullName()
 console.log(fullName)
 
 ```
+
+## Native methods
+
+It is not Jollof Data's goal to claim to be everything you need to access your data layer.
+No data abstraction layer can promise that. What it DOES do beautifully well, is get out of the way so you can do access your data yourself.
+It does so by extending the data adapter for your model through Native methods.
+
+Native methods are where Jollof Data supercedes all current known data abstraction paradigms.
+
+```
+schema.native = {
+    mongodb: {
+        async init() {
+
+            await this.db.collection('User').createIndex({ email: 1 }, { unique: true });
+        },
+    }
+}
+
+```
+
+In fact, JollofJS actively encourages you to define native functions right from the start because the init() native function is the only place you can define indexes on your model.
+
+When booting, Jollof Data will run the init function for any active native groups.
+Here, I'll explain:
+```
+In the startup project,
+Because the User model uses the 'default' dataSource,
+which is grouped under the nativeType named 'mongodb' (as seen in config/base.js under datasources),
+Then that means the nativeType named 'mongodb' is the active nativeType.
+This means that when the app is started, mongodb.init() will be run automatically by Jollof.
+
+```
+
+You can define and run other native functions besides init() (eg: generateGraph) and call it via jollof.models.User.native.generateGraph().
+Notice how you do not specify the nativeType when calling a native function. JollofJS will figure that out for you depending on what is active.
