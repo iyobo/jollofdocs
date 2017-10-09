@@ -101,7 +101,11 @@ Other Special Fields When defining a field, Besides the Javascript primitive typ
       <pubDate>Fri, 08 Sep 2017 02:10:20 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/views/nunjucks/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>JollofJS uses nunjucks for server-side views. The nunjucks root for JollofJS is app/views.
+Please see Nunjucks documentation for how to create your own views and layouts.
+Filters can be created by creating them in app/views/filters/index.js .
+An example filter index file:
+const moment = require(&#39;moment&#39;); const flattenGeo = require(&#39;../../util/util&#39;).flattenGeo; const config = require(&#39;jollof&#39;).config; module.exports = function (nunjucksEnv) { nunjucksEnv.addFilter(&#39;shorten&#39;, function (str, count) { return str.slice(0, count || 5); }); nunjucksEnv.addFilter(&#39;showError&#39;, function (str) { if (str) { return &#39;&amp;lt;span class=&amp;quot;error&amp;quot;&amp;gt;&#39; + str + &#39;&amp;lt;/span&amp;gt;&#39; } else return &amp;quot;&amp;quot; }); nunjucksEnv.</description>
     </item>
     
     <item>
@@ -134,11 +138,7 @@ Now you are ready to run your jollof app:</description>
       
       <guid>http://docs.jollofjs.com/data/queries/</guid>
       <description>Still using the USer model as an example
-Simple (By-Equality) queries Finds await jollof.models.User.findBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}) await jollof.models.User.findOneBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;})
-Counts await jollof.models.User.countBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;})
-Updates await jollof.models.User.updateBy({id: &#39;...&#39;}, newValues)
-Remove await jollof.models.User.removeBy({id: &#39;...&#39;})
-JFQL queries JFQL is the data language of JollofJS.
+Simple (By-Equality) queries //Finds await jollof.models.User.findBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}, opts) await jollof.models.User.findOneBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}, opts) //Counts await jollof.models.User.countBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}) //Updates await jollof.models.User.updateBy({id: &#39;...&#39;}, newValues) //Remove await jollof.models.User.removeBy({id: &#39;...&#39;})  JFQL queries JFQL is the data language of JollofJS.
 It is a simple language that consists of arrays, where each condition in the array is ANDED.
 Each condition follows the convention [FIELD_NAME, COMPARATOR, VALUE ].</description>
     </item>

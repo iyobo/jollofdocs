@@ -60,14 +60,14 @@
 	"title": "Controllers",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3 Controllers Lorem Ipsum.\n"
+	"content": " Chapter 3 Controllers "
 },
 {
 	"uri": "http://docs.jollofjs.com/views/",
 	"title": "Views",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 4 Views Lorem Ipsum.\n"
+	"content": " Chapter 4 Views "
 },
 {
 	"uri": "http://docs.jollofjs.com/controllers/routes/",
@@ -95,7 +95,7 @@
 	"title": "Nunjucks",
 	"tags": [],
 	"description": "",
-	"content": "Lorem Ipsum.\n"
+	"content": "JollofJS uses nunjucks for server-side views. The nunjucks root for JollofJS is app/views.\nPlease see Nunjucks documentation for how to create your own views and layouts.\nFilters can be created by creating them in app/views/filters/index.js .\nAn example filter index file:\nconst moment = require('moment'); const flattenGeo = require('../../util/util').flattenGeo; const config = require('jollof').config; module.exports = function (nunjucksEnv) { nunjucksEnv.addFilter('shorten', function (str, count) { return str.slice(0, count || 5); }); nunjucksEnv.addFilter('showError', function (str) { if (str) { return '\u0026lt;span class=\u0026quot;error\u0026quot;\u0026gt;' + str + '\u0026lt;/span\u0026gt;' } else return \u0026quot;\u0026quot; }); nunjucksEnv.addFilter('stringify', function (obj) { return JSON.stringify(obj); }); nunjucksEnv.addFilter('quickTime', function (date) { return moment(date).format('ddd MMM D, hA') }); nunjucksEnv.addFilter('timeOnly', function (date) { return moment(date).format('hA') }); /** * Turns an object to a json string */ nunjucksEnv.addFilter('stringify', function (obj) { return JSON.stringify(obj) }); /** * output symbol for currency */ nunjucksEnv.addFilter('currencySymbol', function (currency) { let symbol = '$'; if (currency === 'NGN') symbol = 'N' return symbol; }); nunjucksEnv.addFilter('flattenGeo', function (location) { return flattenGeo(location); }); nunjucksEnv.addFilter('googleMapEmbed', function (location) { const flattened = flattenGeo(location); let html = ` \u0026lt;iframe width=\u0026quot;100%\u0026quot; height=\u0026quot;300\u0026quot; frameborder=\u0026quot;0\u0026quot; style=\u0026quot;border:0\u0026quot; src=\u0026quot;https://www.google.com/maps/embed/v1/place?key=${config.thirdParty.google.maps.embedApiKey} \u0026amp;q=${flattened}\u0026quot; allowfullscreen\u0026gt; \u0026lt;/iframe\u0026gt; `; return html; }); }  "
 },
 {
 	"uri": "http://docs.jollofjs.com/basics/requirements/",
@@ -130,7 +130,7 @@
 	"title": "Queries",
 	"tags": [],
 	"description": "",
-	"content": " Still using the USer model as an example\nSimple (By-Equality) queries Finds await jollof.models.User.findBy({firstName: 'foo', lastName: 'bar'}) await jollof.models.User.findOneBy({firstName: 'foo', lastName: 'bar'})\nCounts await jollof.models.User.countBy({firstName: 'foo', lastName: 'bar'})\nUpdates await jollof.models.User.updateBy({id: '...'}, newValues)\nRemove await jollof.models.User.removeBy({id: '...'})\nJFQL queries JFQL is the data language of JollofJS.\nIt is a simple language that consists of arrays, where each condition in the array is ANDED.\nEach condition follows the convention [FIELD_NAME, COMPARATOR, VALUE ]. You can also explicitly define AND or OR conditions by wrapping the condition groups in {and: conditions} or {or: conditions}\nconst date1 = new Date('...'); const date2 = new Date('...'); const query= [ [ 'firstName', '=', 'Patrick' ], [ 'lastName', '=', 'Squid' ], { or:[ [ 'dateCreated', '\u0026lt;=', date1], [ 'dateCreated', '\u0026gt;=', date2] ]} ]  You can use this right in the admin backend as well to explore your app\u0026rsquo;s data. (skip const query=)\nJFQL comparators These are the supported comparators for JFQL.\n= != \u0026gt; \u0026gt;= \u0026lt; \u0026gt;=\nNative queries See the Models section on Native functions.\n"
+	"content": " Still using the USer model as an example\nSimple (By-Equality) queries //Finds await jollof.models.User.findBy({firstName: 'foo', lastName: 'bar'}, opts) await jollof.models.User.findOneBy({firstName: 'foo', lastName: 'bar'}, opts) //Counts await jollof.models.User.countBy({firstName: 'foo', lastName: 'bar'}) //Updates await jollof.models.User.updateBy({id: '...'}, newValues) //Remove await jollof.models.User.removeBy({id: '...'})  JFQL queries JFQL is the data language of JollofJS.\nIt is a simple language that consists of arrays, where each condition in the array is ANDED.\nEach condition follows the convention [FIELD_NAME, COMPARATOR, VALUE ]. You can also explicitly define AND or OR conditions by wrapping the condition groups in {and: conditions} or {or: conditions}\nconst date1 = new Date('...'); const date2 = new Date('...'); const query= [ [ 'firstName', '=', 'Patrick' ], [ 'lastName', '=', 'Squid' ], { or:[ [ 'dateCreated', '\u0026lt;=', date1], [ 'dateCreated', '\u0026gt;=', date2] ]} ] //Finds await jollof.models.User.find(query, opts) await jollof.models.User.findOne(query, opts) //Counts await jollof.models.User.count(query) //Updates await jollof.models.User.update(query, newValues) //Remove await jollof.models.User.remove(query)  You can use this right in the admin backend as well to explore your app\u0026rsquo;s data. (skip const query=)\nJFQL comparators These are the supported comparators for JFQL.\n= != \u0026gt; \u0026gt;= \u0026lt; \u0026gt;=\nNative queries See the Models section on Native functions.\n"
 },
 {
 	"uri": "http://docs.jollofjs.com/categories/",

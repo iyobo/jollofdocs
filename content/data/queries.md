@@ -8,18 +8,21 @@ Still using the USer model as an example
 
 ## Simple (By-Equality) queries
 
-Finds
-`await jollof.models.User.findBy({firstName: 'foo', lastName: 'bar'})`
-`await jollof.models.User.findOneBy({firstName: 'foo', lastName: 'bar'})`
+```
+//Finds
+await jollof.models.User.findBy({firstName: 'foo', lastName: 'bar'}, opts)
+await jollof.models.User.findOneBy({firstName: 'foo', lastName: 'bar'}, opts)
 
-Counts
-`await jollof.models.User.countBy({firstName: 'foo', lastName: 'bar'})`
+//Counts
+await jollof.models.User.countBy({firstName: 'foo', lastName: 'bar'})
 
-Updates
-`await jollof.models.User.updateBy({id: '...'}, newValues)`
+//Updates
+await jollof.models.User.updateBy({id: '...'}, newValues)
 
-Remove
-`await jollof.models.User.removeBy({id: '...'})`
+//Remove
+await jollof.models.User.removeBy({id: '...'})
+
+```
 
 ## JFQL queries
 JFQL is the data language of JollofJS.
@@ -43,6 +46,21 @@ const query= [
     ]}
 
 ]
+
+
+//Finds
+await jollof.models.User.find(query, opts)
+await jollof.models.User.findOne(query, opts)
+
+//Counts
+await jollof.models.User.count(query)
+
+//Updates
+await jollof.models.User.update(query, newValues)
+
+//Remove
+await jollof.models.User.remove(query)
+
 ```
 
 You can use this right in the admin backend as well to explore your app's data. (skip `const query=`)
