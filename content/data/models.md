@@ -49,3 +49,47 @@ module.exports = data.registerModel(schema);
 
 If you have worked with ODMs like Mongoose, this should look familiar.
 
+## Static Methods
+To extend this model statically, define schema.statics. ex:
+
+```
+schema.statics = {
+    async countAllUsersWithFirstName(firstName){
+
+        //you have access to all models here via
+        //jollof.models.AnyModel
+        return await jollof.models.User.countBy({firstName});
+
+    }
+}
+```
+
+then you can call those from anywhere using `await jollof.models.User.countAllUsers()`.
+
+## Instance methods
+
+To extend a model instance, define schema.methods. ex:
+```
+schema.methods = {
+    async printFullName(){
+
+        //Again, you have access to all models here too via
+        //jollof.models.AnyModel
+
+        return this.firstName + ' '+this.lastName;
+    }
+}
+```
+Notice how `this` gives you access to the actual instance of the model instance you are extending.
+
+You can call a model instance method from a model. i.e
+```
+const user = jollof.models.User.findOneBy({email: 'foo@bar.com'})
+...
+//assuming user is not null
+
+const fullName = user.printFullName()
+
+console.log(fullName)
+
+```
