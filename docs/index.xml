@@ -52,7 +52,7 @@ The Higlights:
       <pubDate>Fri, 08 Sep 2017 02:11:12 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/configuration/settings/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>The various settings used to configure JollofJS. TBD</description>
     </item>
     
     <item>
@@ -83,16 +83,7 @@ Other Special Fields When defining a field, Besides the Javascript primitive typ
       <pubDate>Fri, 08 Sep 2017 02:12:15 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/configuration/deploying/</guid>
-      <description>Lorem Ipsum.</description>
-    </item>
-    
-    <item>
-      <title>Environments</title>
-      <link>http://docs.jollofjs.com/configuration/environments/</link>
-      <pubDate>Fri, 08 Sep 2017 02:11:23 -0400</pubDate>
-      
-      <guid>http://docs.jollofjs.com/configuration/environments/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>Deployment Helpers soon to be added.</description>
     </item>
     
     <item>

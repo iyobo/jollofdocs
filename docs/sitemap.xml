@@ -63,11 +63,6 @@
   </url>
   
   <url>
-    <loc>http://docs.jollofjs.com/configuration/environments/</loc>
-    <lastmod>2017-09-08T02:11:23-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://docs.jollofjs.com/views/nunjucks/</loc>
     <lastmod>2017-09-08T02:10:20-04:00</lastmod>
   </url>
