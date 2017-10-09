@@ -1,5 +1,12 @@
 [
 {
+	"uri": "http://docs.jollofjs.com/configuration/environments/",
+	"title": "Environments",
+	"tags": [],
+	"description": "",
+	"content": "JollofJS uses an environmentally extendable/overridable config system.\nSet the environment by passing in NODE_ENV=myEnv node index.js and as long as a myEnv.js file exists in config/, it will be used to override the settings in config/base.js.\nYou can have as many environments as you need. \u0026ldquo;development\u0026rdquo; is the default env if no NODE_ENV is passed in.\n"
+},
+{
 	"uri": "http://docs.jollofjs.com/controllers/flow/",
 	"title": "Flow",
 	"tags": [],
@@ -109,7 +116,7 @@
 	"title": "Configuration",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 5 Configuration JollofJS uses an environmentally extendable/overridable config system.\nSet the environment by passing in NODE_ENV=myEnv node index.js and as long as a myEnv.js file exists in config/, it will be used to override the settings in config/base.js.\nYou can have as many environments as you need. \u0026ldquo;development\u0026rdquo; is the default env if no NODE_ENV is passed in.\n"
+	"content": " Chapter 5 Configuration "
 },
 {
 	"uri": "http://docs.jollofjs.com/admin/",

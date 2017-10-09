@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://docs.jollofjs.com/configuration/environments/</loc>
+    <lastmod>2017-09-08T02:11:23-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://docs.jollofjs.com/controllers/flow/</loc>
     <lastmod>2017-09-08T02:09:26-04:00</lastmod>
   </url>
