@@ -13,17 +13,17 @@
     <title>Queries :: JollofJS Docs</title>
     
     
-    <link href="/css/nucleus.css?1507524704" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1507524704" rel="stylesheet">
-    <link href="/css/hybrid.css?1507524704" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1507524704" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1507524704" rel="stylesheet">
-    <link href="/css/horsey.css?1507524704" rel="stylesheet">
-    <link href="/css/theme.css?1507524704" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1507524704" rel="stylesheet">
+    <link href="/css/nucleus.css?1507527347" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1507527347" rel="stylesheet">
+    <link href="/css/hybrid.css?1507527347" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1507527347" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1507527347" rel="stylesheet">
+    <link href="/css/horsey.css?1507527347" rel="stylesheet">
+    <link href="/css/theme.css?1507527347" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1507527347" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1507524704"></script>
+    <script src="/js/jquery-2.x.min.js?1507527347"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1507524704"></script>
-<script type="text/javascript" src="/js/horsey.js?1507524704"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1507527347"></script>
+<script type="text/javascript" src="/js/horsey.js?1507527347"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/docs.jollofjs.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1507524704"></script>
+<script type="text/javascript" src="/js/search.js?1507527347"></script>
 
     
   </div>
@@ -539,7 +539,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#simple-by-equality-queries">Simple (By-Equality) queries</a></li>
+<li><a href="#jfql-queries">JFQL queries</a>
+<ul>
+<li><a href="#jfql-comparators">JFQL comparators</a></li>
+</ul></li>
+<li><a href="#native-queries">Native queries</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -556,7 +568,65 @@
 
         
 
-<p>How to</p>
+
+
+<p>Still using the USer model as an example</p>
+
+<h2 id="simple-by-equality-queries">Simple (By-Equality) queries</h2>
+
+<p>Finds
+<code>await jollof.models.User.findBy({firstName: 'foo', lastName: 'bar'})</code>
+<code>await jollof.models.User.findOneBy({firstName: 'foo', lastName: 'bar'})</code></p>
+
+<p>Counts
+<code>await jollof.models.User.countBy({firstName: 'foo', lastName: 'bar'})</code></p>
+
+<p>Updates
+<code>await jollof.models.User.updateBy({id: '...'}, newValues)</code></p>
+
+<p>Remove
+<code>await jollof.models.User.removeBy({id: '...'})</code></p>
+
+<h2 id="jfql-queries">JFQL queries</h2>
+
+<p>JFQL is the data language of JollofJS.</p>
+
+<p>It is a simple language that consists of arrays, where each condition in the array is ANDED.</p>
+
+<p>Each condition follows the convention <code>[FIELD_NAME, COMPARATOR, VALUE ]</code>.
+You can also explicitly define AND or OR conditions by wrapping the condition groups in {and: conditions} or {or: conditions}</p>
+
+<pre><code>const date1 = new Date('...');
+const date2 = new Date('...');
+
+const query= [
+    [ 'firstName', '=', 'Patrick' ],
+    [ 'lastName', '=', 'Squid' ],
+    {
+     or:[
+        [ 'dateCreated', '&lt;=', date1],
+        [ 'dateCreated', '&gt;=', date2]
+    ]}
+
+]
+</code></pre>
+
+<p>You can use this right in the admin backend as well to explore your app&rsquo;s data. (skip <code>const query=</code>)</p>
+
+<h3 id="jfql-comparators">JFQL comparators</h3>
+
+<p>These are the supported comparators for JFQL.</p>
+
+<p>=
+!=
+&gt;
+&gt;=
+&lt;
+&gt;=</p>
+
+<h2 id="native-queries">Native queries</h2>
+
+<p>See the Models section on Native functions.</p>
 
 
 <footer class=" footline" >
@@ -906,20 +976,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1507524704"></script>
-    <script src="/js/perfect-scrollbar.min.js?1507524704"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1507524704"></script>
-    <script src="/js/jquery.sticky-kit.min.js?1507524704"></script>
-    <script src="/js/featherlight.min.js?1507524704"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1507524704"></script>
-    <script src="/js/highlight.pack.js?1507524704"></script>
+    <script src="/js/clipboard.min.js?1507527347"></script>
+    <script src="/js/perfect-scrollbar.min.js?1507527347"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1507527347"></script>
+    <script src="/js/jquery.sticky-kit.min.js?1507527347"></script>
+    <script src="/js/featherlight.min.js?1507527347"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1507527347"></script>
+    <script src="/js/highlight.pack.js?1507527347"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1507524704"></script>
-    <script src="/js/learn.js?1507524704"></script>
-    <script src="/js/hugo-learn.js?1507524704"></script>
+    <script src="/js/modernizr.custom.71422.js?1507527347"></script>
+    <script src="/js/learn.js?1507527347"></script>
+    <script src="/js/hugo-learn.js?1507527347"></script>
 
-    <link href="/mermaid/mermaid.css?1507524704" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1507524704"></script>
+    <link href="/mermaid/mermaid.css?1507527347" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1507527347"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

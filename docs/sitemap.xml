@@ -43,11 +43,6 @@
   </url>
   
   <url>
-    <loc>http://docs.jollofjs.com/data/queries/</loc>
-    <lastmod>2017-09-08T02:04:05-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://docs.jollofjs.com/controllers/</loc>
     <lastmod>2017-09-08T01:29:53-04:00</lastmod>
   </url>
@@ -95,6 +90,11 @@
   <url>
     <loc>http://docs.jollofjs.com/admin/</loc>
     <lastmod>2017-09-08T02:16:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.jollofjs.com/data/queries/</loc>
+    <lastmod>2017-09-08T02:04:05-04:00</lastmod>
   </url>
   
   <url>

@@ -13,17 +13,17 @@
     <title>Models :: JollofJS Docs</title>
     
     
-    <link href="/css/nucleus.css?1507524704" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1507524704" rel="stylesheet">
-    <link href="/css/hybrid.css?1507524704" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1507524704" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1507524704" rel="stylesheet">
-    <link href="/css/horsey.css?1507524704" rel="stylesheet">
-    <link href="/css/theme.css?1507524704" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1507524704" rel="stylesheet">
+    <link href="/css/nucleus.css?1507527347" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1507527347" rel="stylesheet">
+    <link href="/css/hybrid.css?1507527347" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1507527347" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1507527347" rel="stylesheet">
+    <link href="/css/horsey.css?1507527347" rel="stylesheet">
+    <link href="/css/theme.css?1507527347" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1507527347" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1507524704"></script>
+    <script src="/js/jquery-2.x.min.js?1507527347"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1507524704"></script>
-<script type="text/javascript" src="/js/horsey.js?1507524704"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1507527347"></script>
+<script type="text/javascript" src="/js/horsey.js?1507527347"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/docs.jollofjs.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1507524704"></script>
+<script type="text/javascript" src="/js/search.js?1507527347"></script>
 
     
   </div>
@@ -545,6 +545,7 @@
 <ul>
 <li><a href="#static-methods">Static Methods</a></li>
 <li><a href="#instance-methods">Instance methods</a></li>
+<li><a href="#native-methods">Native methods</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -655,6 +656,41 @@ const fullName = user.printFullName()
 console.log(fullName)
 
 </code></pre>
+
+<h2 id="native-methods">Native methods</h2>
+
+<p>It is not Jollof Data&rsquo;s goal to claim to be everything you need to access your data layer.
+No data abstraction layer can promise that. What it DOES do beautifully well, is get out of the way so you can do access your data yourself.
+It does so by extending the data adapter for your model through Native methods.</p>
+
+<p>Native methods are where Jollof Data supercedes all current known data abstraction paradigms.</p>
+
+<pre><code>schema.native = {
+    mongodb: {
+        async init() {
+
+            await this.db.collection('User').createIndex({ email: 1 }, { unique: true });
+        },
+    }
+}
+
+</code></pre>
+
+<p>In fact, JollofJS actively encourages you to define native functions right from the start because the init() native function is the only place you can define indexes on your model.</p>
+
+<p>When booting, Jollof Data will run the init function for any active native groups.
+Here, I&rsquo;ll explain:</p>
+
+<pre><code>In the startup project,
+Because the User model uses the 'default' dataSource,
+which is grouped under the nativeType named 'mongodb' (as seen in config/base.js under datasources),
+Then that means the nativeType named 'mongodb' is the active nativeType.
+This means that when the app is started, mongodb.init() will be run automatically by Jollof.
+
+</code></pre>
+
+<p>You can define and run other native functions besides init() (eg: generateGraph) and call it via jollof.models.User.native.generateGraph().
+Notice how you do not specify the nativeType when calling a native function. JollofJS will figure that out for you depending on what is active.</p>
 
 
 <footer class=" footline" >
@@ -1001,20 +1037,20 @@ console.log(fullName)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1507524704"></script>
-    <script src="/js/perfect-scrollbar.min.js?1507524704"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1507524704"></script>
-    <script src="/js/jquery.sticky-kit.min.js?1507524704"></script>
-    <script src="/js/featherlight.min.js?1507524704"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1507524704"></script>
-    <script src="/js/highlight.pack.js?1507524704"></script>
+    <script src="/js/clipboard.min.js?1507527347"></script>
+    <script src="/js/perfect-scrollbar.min.js?1507527347"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1507527347"></script>
+    <script src="/js/jquery.sticky-kit.min.js?1507527347"></script>
+    <script src="/js/featherlight.min.js?1507527347"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1507527347"></script>
+    <script src="/js/highlight.pack.js?1507527347"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1507524704"></script>
-    <script src="/js/learn.js?1507524704"></script>
-    <script src="/js/hugo-learn.js?1507524704"></script>
+    <script src="/js/modernizr.custom.71422.js?1507527347"></script>
+    <script src="/js/learn.js?1507527347"></script>
+    <script src="/js/hugo-learn.js?1507527347"></script>
 
-    <link href="/mermaid/mermaid.css?1507524704" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1507524704"></script>
+    <link href="/mermaid/mermaid.css?1507527347" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1507527347"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

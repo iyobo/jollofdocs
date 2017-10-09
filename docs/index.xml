@@ -66,15 +66,6 @@ Other Special Fields When defining a field, Besides the Javascript primitive typ
     </item>
     
     <item>
-      <title>Queries</title>
-      <link>http://docs.jollofjs.com/data/queries/</link>
-      <pubDate>Fri, 08 Sep 2017 02:04:05 -0400</pubDate>
-      
-      <guid>http://docs.jollofjs.com/data/queries/</guid>
-      <description>How to</description>
-    </item>
-    
-    <item>
       <title>Routes</title>
       <link>http://docs.jollofjs.com/controllers/routes/</link>
       <pubDate>Fri, 08 Sep 2017 02:15:26 -0400</pubDate>
@@ -131,6 +122,22 @@ Create your JollofJS app with:
 jollof new myApp  Before you run your app, create an admin user:
 cd myApp jollof run createAdmin test@test.com password  This runs the jollof command in createAdmin.js, which exists in the commands/ directory in your project.
 Now you are ready to run your jollof app:</description>
+    </item>
+    
+    <item>
+      <title>Queries</title>
+      <link>http://docs.jollofjs.com/data/queries/</link>
+      <pubDate>Fri, 08 Sep 2017 02:04:05 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/data/queries/</guid>
+      <description>Still using the USer model as an example
+Simple (By-Equality) queries Finds await jollof.models.User.findBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}) await jollof.models.User.findOneBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;})
+Counts await jollof.models.User.countBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;})
+Updates await jollof.models.User.updateBy({id: &#39;...&#39;}, newValues)
+Remove await jollof.models.User.removeBy({id: &#39;...&#39;})
+JFQL queries JFQL is the data language of JollofJS.
+It is a simple language that consists of arrays, where each condition in the array is ANDED.
+Each condition follows the convention [FIELD_NAME, COMPARATOR, VALUE ].</description>
     </item>
     
   </channel>
