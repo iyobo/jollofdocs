@@ -17,7 +17,10 @@
       <pubDate>Fri, 08 Sep 2017 02:09:26 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/controllers/flow/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>In jollofJS, flow is another term for middleware.
+There are 2 types of flow items: constraints and controller Actions.
+Constraints basically just block or allow access down the chain of flow/middleware. Controller actions are the leaf-level or tail-level of the flow where the actual route is satisfied.
+See koa-controller-jollof for more details.</description>
     </item>
     
     <item>
@@ -71,7 +74,7 @@ Other Special Fields When defining a field, Besides the Javascript primitive typ
       <pubDate>Fri, 08 Sep 2017 02:15:26 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/controllers/routes/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>See koa-jollof-router for details on routing.</description>
     </item>
     
     <item>

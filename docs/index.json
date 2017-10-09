@@ -4,7 +4,7 @@
 	"title": "Flow",
 	"tags": [],
 	"description": "",
-	"content": "Lorem Ipsum.\n"
+	"content": "In jollofJS, flow is another term for middleware.\nThere are 2 types of flow items: constraints and controller Actions.\nConstraints basically just block or allow access down the chain of flow/middleware. Controller actions are the leaf-level or tail-level of the flow where the actual route is satisfied.\nSee koa-controller-jollof for more details.\n"
 },
 {
 	"uri": "http://docs.jollofjs.com/data/models/",
@@ -74,7 +74,7 @@
 	"title": "Routes",
 	"tags": [],
 	"description": "",
-	"content": "Lorem Ipsum.\n"
+	"content": "See koa-jollof-router for details on routing.\n"
 },
 {
 	"uri": "http://docs.jollofjs.com/configuration/deploying/",
