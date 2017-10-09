@@ -58,7 +58,11 @@ The Higlights:
       <pubDate>Fri, 08 Sep 2017 02:03:53 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/data/fields/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>Generic Field Definition Examples To define a field: someString: String or someString: {type: String}
+To define a required field: someString: {type: String, required: true}
+To define a String field that should be inputed with a textarea in the admin: someString: {type: String, meta:{ widget: &#39;textarea&#39;} }
+All Default Javascript primitive types are supported as field types i.e String, Number, Boolean, Date.
+Other Special Fields When defining a field, Besides the Javascript primitive types, Jollof supports special field types.</description>
     </item>
     
     <item>
@@ -67,7 +71,7 @@ The Higlights:
       <pubDate>Fri, 08 Sep 2017 02:04:05 -0400</pubDate>
       
       <guid>http://docs.jollofjs.com/data/queries/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>How to</description>
     </item>
     
     <item>

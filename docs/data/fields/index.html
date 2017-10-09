@@ -13,17 +13,17 @@
     <title>Fields :: JollofJS Docs</title>
     
     
-    <link href="/css/nucleus.css?1504854153" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1504854153" rel="stylesheet">
-    <link href="/css/hybrid.css?1504854153" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1504854153" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1504854153" rel="stylesheet">
-    <link href="/css/horsey.css?1504854153" rel="stylesheet">
-    <link href="/css/theme.css?1504854153" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1504854153" rel="stylesheet">
+    <link href="/css/nucleus.css?1507524704" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1507524704" rel="stylesheet">
+    <link href="/css/hybrid.css?1507524704" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1507524704" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1507524704" rel="stylesheet">
+    <link href="/css/horsey.css?1507524704" rel="stylesheet">
+    <link href="/css/theme.css?1507524704" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1507524704" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1504854153"></script>
+    <script src="/js/jquery-2.x.min.js?1507524704"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1504854153"></script>
-<script type="text/javascript" src="/js/horsey.js?1504854153"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1507524704"></script>
+<script type="text/javascript" src="/js/horsey.js?1507524704"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/docs.jollofjs.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1504854153"></script>
+<script type="text/javascript" src="/js/search.js?1507524704"></script>
 
     
   </div>
@@ -539,7 +539,23 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#generic-field-definition-examples">Generic Field Definition Examples</a></li>
+<li><a href="#other-special-fields">Other Special Fields</a>
+<ul>
+<li><a href="#email">Email</a></li>
+<li><a href="#textarea">Textarea</a></li>
+<li><a href="#richtext">RichText</a></li>
+<li><a href="#file">File</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#collections">Collections</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -556,7 +572,105 @@
 
         
 
-<p>Lorem Ipsum.</p>
+
+
+<h2 id="generic-field-definition-examples">Generic Field Definition Examples</h2>
+
+<p>To define a field:
+<code>someString: String</code> or <code>someString: {type: String}</code></p>
+
+<p>To define a required field:
+<code>someString: {type: String, required: true}</code></p>
+
+<p>To define a String field that should be inputed with a textarea in the admin:
+<code>someString: {type: String, meta:{ widget: 'textarea'} }</code></p>
+
+<p>All Default Javascript primitive types are supported as field types i.e String, Number, Boolean, Date.</p>
+
+<h2 id="other-special-fields">Other Special Fields</h2>
+
+<p>When defining a field, Besides the Javascript primitive types, Jollof supports special field types.</p>
+
+<p>If you looked at the user model, You should see the email field defined using one of such special Field types.</p>
+
+<pre><code>
+const types = data.types;
+
+const schema = {
+   ...
+    structure: {
+        ...
+        email: types.Email(),
+        ...
+    },
+
+    ...
+
+}
+
+</code></pre>
+
+<p>The special field types are listed below:</p>
+
+<h3 id="email">Email</h3>
+
+<p><code>somefield: types.Email(),</code></p>
+
+<p>for required: <code>somefield: types.Email({required: true}),</code></p>
+
+<h3 id="textarea">Textarea</h3>
+
+<p><code>somefield: types.Textarea(),</code> (prefferred) or <code>somefield: {type: String, widget: 'textarea' }</code></p>
+
+<p>for required: <code>somefield: types.Textarea({required: true}),</code></p>
+
+<h3 id="richtext">RichText</h3>
+
+<p>This gives you a nice WYSIWYG HTML editor to work with in the admin for this field.</p>
+
+<p><code>somefield: types.RichText(),</code></p>
+
+<p>for required: <code>somefield: types.RichText({required: true}),</code></p>
+
+<h3 id="file">File</h3>
+
+<p>Use to upload a single file.
+<code>somefield: types.File()</code></p>
+
+<p>The structure this takes in the database is that of a HTML5 file object.</p>
+
+<h3 id="location">Location</h3>
+
+<p>Use to represent a location. The widget used in the admin for this field is a map with a draggable pointer (set long/lat) with place search and address field entry.</p>
+
+<p><code>someLocation: types.Location()</code></p>
+
+<h3 id="collections">Collections</h3>
+
+<p>A field can also be an array or object of any combination of other fields. ex:</p>
+
+<p>A string array: <code>tags: [String]</code> or <code>tags: [{type: String}]</code>
+An array of file fields: <code>files: [ types.File() ]</code>
+An array of locations: <code>geoBreadCrumb: [types.Location()]</code></p>
+
+<p>Here&rsquo;s an object with a string and a location</p>
+
+<pre><code>geoMessage: {
+    text: String,
+    location: types.Location()
+}
+</code></pre>
+
+<p>And of-course, you can make an array out of that too!</p>
+
+<pre><code>geoMessages: [{
+    text: String,
+    location: types.Location()
+}]
+</code></pre>
+
+<p>The possibilities are endless.
+Enjoy what it feels like to have Total schema freedom and an admin UI that intelligently keep up with your imagination/structure.</p>
 
 
 <footer class=" footline" >
@@ -906,20 +1020,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1504854153"></script>
-    <script src="/js/perfect-scrollbar.min.js?1504854153"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1504854153"></script>
-    <script src="/js/jquery.sticky-kit.min.js?1504854153"></script>
-    <script src="/js/featherlight.min.js?1504854153"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1504854153"></script>
-    <script src="/js/highlight.pack.js?1504854153"></script>
+    <script src="/js/clipboard.min.js?1507524704"></script>
+    <script src="/js/perfect-scrollbar.min.js?1507524704"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1507524704"></script>
+    <script src="/js/jquery.sticky-kit.min.js?1507524704"></script>
+    <script src="/js/featherlight.min.js?1507524704"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1507524704"></script>
+    <script src="/js/highlight.pack.js?1507524704"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1504854153"></script>
-    <script src="/js/learn.js?1504854153"></script>
-    <script src="/js/hugo-learn.js?1504854153"></script>
+    <script src="/js/modernizr.custom.71422.js?1507524704"></script>
+    <script src="/js/learn.js?1507524704"></script>
+    <script src="/js/hugo-learn.js?1507524704"></script>
 
-    <link href="/mermaid/mermaid.css?1504854153" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1504854153"></script>
+    <link href="/mermaid/mermaid.css?1507524704" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1507524704"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

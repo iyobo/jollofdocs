@@ -11,7 +11,7 @@
 	"title": "Models",
 	"tags": [],
 	"description": "",
-	"content": "Models are how you tell JollofJS how to structure your data.\nAll models for your app MUST be placed under apps/models\nLet\u0026rsquo;s look at the User model in there\nconst jollof = require('jollof'); const data = jollof.data; const types = data.types; const jql = data.jql; const schema = { name: 'User', dataSource: 'default', structure: { firstName: String, lastName: String, name: { type: String, meta: { disableEdit: true } }, email: types.Email(), password: { type: String, meta: { widget: 'password' } }, isAdmin: Boolean, accountType: { type: String, meta: { choices: [ 'normal', 'grand', 'epic' ] } } }, ... } module.exports = data.registerModel(schema);  If you have worked with ODMs like Mongoose, this should look familiar.\n"
+	"content": " Models are how you tell JollofJS how to structure your data.\nAll models for your app MUST be placed under apps/models\nLet\u0026rsquo;s look at the User model in there\nconst jollof = require('jollof'); const data = jollof.data; const types = data.types; const jql = data.jql; const schema = { name: 'User', dataSource: 'default', structure: { firstName: String, lastName: String, name: { type: String, meta: { disableEdit: true } }, email: types.Email(), password: { type: String, meta: { widget: 'password' } }, isAdmin: Boolean, accountType: { type: String, meta: { choices: [ 'normal', 'grand', 'epic' ] } } }, ... } module.exports = data.registerModel(schema);  If you have worked with ODMs like Mongoose, this should look familiar.\nStatic Methods To extend this model statically, define schema.statics. ex:\nschema.statics = { async countAllUsersWithFirstName(firstName){ //you have access to all models here via //jollof.models.AnyModel return await jollof.models.User.countBy({firstName}); } }  then you can call those from anywhere using await jollof.models.User.countAllUsers().\nInstance methods To extend a model instance, define schema.methods. ex:\nschema.methods = { async printFullName(){ //Again, you have access to all models here too via //jollof.models.AnyModel return this.firstName + ' '+this.lastName; } }  Notice how this gives you access to the actual instance of the model instance you are extending.\nYou can call a model instance method from a model. i.e\nconst user = jollof.models.User.findOneBy({email: 'foo@bar.com'}) ... //assuming user is not null const fullName = user.printFullName() console.log(fullName)  "
 },
 {
 	"uri": "http://docs.jollofjs.com/basics/",
@@ -46,7 +46,7 @@
 	"title": "Fields",
 	"tags": [],
 	"description": "",
-	"content": "Lorem Ipsum.\n"
+	"content": " Generic Field Definition Examples To define a field: someString: String or someString: {type: String}\nTo define a required field: someString: {type: String, required: true}\nTo define a String field that should be inputed with a textarea in the admin: someString: {type: String, meta:{ widget: 'textarea'} }\nAll Default Javascript primitive types are supported as field types i.e String, Number, Boolean, Date.\nOther Special Fields When defining a field, Besides the Javascript primitive types, Jollof supports special field types.\nIf you looked at the user model, You should see the email field defined using one of such special Field types.\n const types = data.types; const schema = { ... structure: { ... email: types.Email(), ... }, ... }  The special field types are listed below:\nEmail somefield: types.Email(),\nfor required: somefield: types.Email({required: true}),\nTextarea somefield: types.Textarea(), (prefferred) or somefield: {type: String, widget: 'textarea' }\nfor required: somefield: types.Textarea({required: true}),\nRichText This gives you a nice WYSIWYG HTML editor to work with in the admin for this field.\nsomefield: types.RichText(),\nfor required: somefield: types.RichText({required: true}),\nFile Use to upload a single file. somefield: types.File()\nThe structure this takes in the database is that of a HTML5 file object.\nLocation Use to represent a location. The widget used in the admin for this field is a map with a draggable pointer (set long/lat) with place search and address field entry.\nsomeLocation: types.Location()\nCollections A field can also be an array or object of any combination of other fields. ex:\nA string array: tags: [String] or tags: [{type: String}] An array of file fields: files: [ types.File() ] An array of locations: geoBreadCrumb: [types.Location()]\nHere\u0026rsquo;s an object with a string and a location\ngeoMessage: { text: String, location: types.Location() }  And of-course, you can make an array out of that too!\ngeoMessages: [{ text: String, location: types.Location() }]  The possibilities are endless. Enjoy what it feels like to have Total schema freedom and an admin UI that intelligently keep up with your imagination/structure.\n"
 },
 {
 	"uri": "http://docs.jollofjs.com/data/",
@@ -60,7 +60,7 @@
 	"title": "Queries",
 	"tags": [],
 	"description": "",
-	"content": "Lorem Ipsum.\n"
+	"content": "How to\n"
 },
 {
 	"uri": "http://docs.jollofjs.com/controllers/",
