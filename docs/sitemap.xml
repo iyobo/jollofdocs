@@ -98,6 +98,11 @@
   </url>
   
   <url>
+    <loc>http://docs.jollofjs.com/data/adapters/</loc>
+    <lastmod>2017-09-08T02:04:05-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://docs.jollofjs.com/categories/</loc>
     <priority>0</priority>
   </url>

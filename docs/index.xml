@@ -145,5 +145,16 @@ It is a simple language that consists of arrays, where each condition in the arr
 Each condition follows the convention [FIELD_NAME, COMPARATOR, VALUE ].</description>
     </item>
     
+    <item>
+      <title>Adapters</title>
+      <link>http://docs.jollofjs.com/data/adapters/</link>
+      <pubDate>Fri, 08 Sep 2017 02:04:05 -0400</pubDate>
+      
+      <guid>http://docs.jollofjs.com/data/adapters/</guid>
+      <description>Adapters are what JollofJS uses to interface with datasources. Key requirements for a
+ Convert JFQL to the native query language  Still using the USer model as an example
+Simple (By-Equality) queries //Finds await jollof.models.User.findBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}, opts) await jollof.models.User.findOneBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}, opts) //Counts await jollof.models.User.countBy({firstName: &#39;foo&#39;, lastName: &#39;bar&#39;}) //Updates await jollof.models.User.updateBy({id: &#39;...&#39;}, newValues) //Remove await jollof.models.User.removeBy({id: &#39;...&#39;})  JFQL queries JFQL is the data language of JollofJS.</description>
+    </item>
+    
   </channel>
 </rss>
