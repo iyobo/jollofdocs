@@ -99,7 +99,10 @@ var stringId = req.params.id;
 const User = jollof.models.User;
 const id = User.wrapId(stringId);
 
-const results = await User.find([ ['someRefField', '=', id] ]);
-
+//Now you can use it to build conditions
+await User.find([ ['someRefField', '=', id] ]);
+await User.findBy({someOtherRef: id});
 
 ```
+
+Doing it this way (instead of manually casting it yourself) ensures that you don't have to worry about this later if the Model's datasource changes to another database entirely that handles Ids differently.
