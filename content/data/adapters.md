@@ -1,8 +1,16 @@
 +++
-title = "Queries"
+title = "Adapters"
 date =  2017-09-08T02:04:05-04:00
-weight = 6
+weight = 7
 +++
+
+Adapters are what JollofJS uses to interface with datasources.
+Key requirements for a
+
+* Convert JFQL to the native query language
+
+
+
 
 Still using the USer model as an example
 
@@ -77,29 +85,3 @@ These are the supported comparators for JFQL.
 
 ## Native queries
 See the Models section on Native functions.
-
-## Querying Ref fields
-
-Each database has it's own way of storing Id fields or fields that "ref" to other entities.
-E.g MongoDB uses the ObjectID object type to store id fields.
-
-Given this, it is important to make sure you are using the right Id type when constructing conditions involving Ref fields.
-i.e checking an ObjectID ref field with a string value (as is what you would most likely get from server request params/queries/etc) will not match!
-
-The recommended way to do this is to use `Model.wrapId(yourId)`.
-This will convert the id value you are checking with to the right Id type.
-
-```
-//in some controller
-var stringId = req.params.id;
-
-...
-
-//somewhere down the execution path, where you need to make a jollofJS query with this Id
-const User = jollof.models.User;
-const id = User.wrapId(stringId);
-
-const results = await User.find([ ['someRefField', '=', id] ]);
-
-
-```
